@@ -12,6 +12,10 @@ $(function() {
     }
   });
 });
+$(function() {
+  $('.contact__field--phone').inputmask({"mask": " +7 999 9999999 "} );
+});
+
 /* выпадающее меню по клику в шапке */
 $(function () {
   var dropMenu = $('.header__menu-link--drop')
@@ -44,14 +48,10 @@ const childrenSwiper = new Swiper('.page-info__slider', {
   spaceBetween: 10,
   grabCursor: true,
 });
-$(function() {
-  $('.contact__field--phone').inputmask({"mask": " +7 999 9999999 "} );
-});
+
 
 
 $(function() {
   $("#tabs").tabs();
 });
-
-
 
