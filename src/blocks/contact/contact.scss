@@ -1,0 +1,102 @@
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  column-gap: 50px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 100px 120px;
+
+  &__title {
+    margin-bottom: 30px;
+    font-size: px-to-em(40);
+    line-height: lh-to-pct(49, 40);
+    font-weight: 600;
+    text-transform: uppercase;
+    background: linear-gradient(to right, var(--blue-color), var(--red-color));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &__subtitle {
+    font-size: px-to-em(18);
+    line-height: lh-to-pct(22, 18);
+    font-weight: 400;
+    color: var(--black-color);
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    row-gap: 16px;
+  }
+  &__field {
+    width: 100%;
+    padding: 10px 16px;
+    border: none;
+    border-bottom: 1px solid transparent;
+    outline: none;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+    font-size: px-to-em(16);
+    line-height: lh-to-pct(22, 18);
+    font-weight: 400;
+    color: var(--black-color);
+    &:focus {
+      border-bottom: 1px solid var(--red-color);
+    }
+    &::placeholder {
+      color: var(--black-color);
+    }
+  }
+  &__check {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    cursor: pointer;
+  }
+  &__checkbox {
+    height: 32px;
+    width: 32px;
+    appearance: none;
+    box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5), 5px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 50%; 
+    border: 5px solid #fff;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #fff;
+    &::after {
+      content: "";
+      width: 16px;
+      height: 16px;
+    }
+    &:checked{
+      box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5), 5px 5px 10px rgba(70, 70, 70, 0.12), inset -5px -5px 10px rgba(255, 255, 255, 0.5), inset 5px 5px 10px rgba(70, 70, 70, 0.12);
+      &::after {
+        content: "";
+        width: 16px;
+        height: 16px;
+        background: url(../img/checked.svg) no-repeat center / contain;
+      }
+    }
+  }
+  &__btn {
+    padding: 10px 32px;
+    border: none;
+    outline: none;
+    font-size: px-to-em(18);
+    line-height: lh-to-pct(24, 20);
+    font-weight: 500;
+    color: #ffffff;
+    text-decoration: none;
+    background: linear-gradient(90.00deg, var(--blue-color),var(--red-color) 100%);
+    box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    &:hover {
+      transform: translateY(-6px);
+    }
+  }
+}

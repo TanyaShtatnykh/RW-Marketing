@@ -1,0 +1,60 @@
+.page-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 70px 100px;
+
+  &__text-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 16px;
+    padding-bottom: 40px;
+  }
+  &__slider {
+    max-width: 100%;
+    user-select: none
+  }
+  .swiper-wrapper.child {
+    height: 350px;
+  }
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__arrow {
+    display: flex;
+    align-items: center;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    width: 80px;
+    height: 100%;
+    z-index: 10;
+    cursor: pointer;
+    &--prev {
+      justify-content: flex-start;
+      left: 0;
+      padding-left: 10px;
+      background: linear-gradient(to left, transparent, var(--black-color));
+    }
+    &--next {
+      justify-content: flex-end;
+      right: 0;
+      padding-right: 10px;
+      background: linear-gradient(to right, transparent, var(--black-color));
+      svg {
+        rotate: 180deg;
+      }
+    }
+    &:hover {
+      svg {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

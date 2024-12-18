@@ -1,0 +1,13 @@
+mixin contact(modifier)
+  section.contact&attributes(attributes)#contact
+    .contact__column
+      h2.contact__title Оставить заявку или&nbsp;задать вопрос
+      p.contact__subtitle Вот вам яркий пример современных тенденций — убеждённость некоторых оппонентов не даёт нам иного выбора, кроме определения модели развития.
+    form.contact__form
+      input.contact__field(type="text" placeholder="Ваше имя")
+      input.contact__field.contact__field--phone(type="tel" placeholder="Номер телефона")
+      input.contact__field(type="email" placeholder="Контактный e-mail *" required)
+      label.contact__check
+        input.contact__checkbox(type="checkbox" required)
+        | Я даю согласие на обработку персональных данных
+      button.contact__btn(type="submit") Отправить
