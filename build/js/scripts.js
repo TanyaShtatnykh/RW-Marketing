@@ -30,6 +30,8 @@ $(function () {
 		}
   })
 });
+
+
 const childrenSwiper = new Swiper('.page-info__slider', {
   navigation: {
     nextEl: '.page-info__arrow--next',
@@ -49,10 +51,7 @@ const childrenSwiper = new Swiper('.page-info__slider', {
   grabCursor: true,
 });
 
-
-
-
-
 $(function() {
   $("#tabs").tabs();
 });
+
