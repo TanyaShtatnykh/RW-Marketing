@@ -51,7 +51,8 @@ const childrenSwiper = new Swiper('.page-info__slider', {
 
 
 
+
+
 $(function() {
   $("#tabs").tabs();
 });
-
