@@ -3,16 +3,21 @@ const childrenSwiper = new Swiper('.page-info__slider', {
     nextEl: '.page-info__arrow--next',
     prevEl: '.page-info__arrow--prev'
   },
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'fraction',
-  },
   loop: true,
   preloadImages: false,
   lazy: {
     loadOnTransitionStart: false,
   },
-  slidesPerView: 2,
-  spaceBetween: 10,
-  grabCursor: true,
+  breakpoints: {
+    280: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        grabCursor: false,
+    },
+    768: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+        grabCursor: true,
+    }
+  }
 });

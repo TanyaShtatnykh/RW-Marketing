@@ -17,24 +17,44 @@ mixin header(modifier)
     .header__header
       a.header__logo-link(href="index.html")
           img.header__logo(src="img/header-logo.svg", alt="Logo Reon")
-      nav.header__header-nav
-        ul.header__menu
-          li.header__menu-item--drop 
-            button.header__menu-link.header__menu-link--drop
-              | Маркетинг-банк
-              include ./img/header-arrow.svg
-            ul.header__sub-menu
-              li.header__sub-menu-item
-                a.header__sub-menu-link(href="page.html") Стенды
-              li.header__sub-menu-item
-                a.header__sub-menu-link(href="page.html") Маркетинговые материалы
-              li.header__sub-menu-item
-                a.header__sub-menu-link(href="page.html") Семинары и презентации
-              li.header__sub-menu-item
-                a.header__sub-menu-link(href="page.html") Сайт и интернет
-          li.header__menu-item
-            a.header__menu-link(href="index.html#lists") Референс-листы
-          li.header__menu-item
-            a.header__menu-link(href="index.html#study") Обучение
-          li.header__menu-item
-            a.header__menu-link(href="index.html#team") Команда
+      .header__burger-btn
+        .header__burger
+          .header__line
+          .header__line
+          .header__line
+        .header__cross
+          .header__line
+          .header__line
+      .header__wrapper
+        nav.header__header-nav
+          ul.header__menu
+            li.header__menu-item--drop 
+              button.header__menu-link.header__menu-link--drop
+                | Маркетинг-банк
+                include ./img/header-arrow.svg
+              ul.header__sub-menu
+                li.header__sub-menu-item
+                  a.header__sub-menu-link(href="page.html") Стенды
+                li.header__sub-menu-item
+                  a.header__sub-menu-link(href="page.html") Маркетинговые материалы
+                li.header__sub-menu-item
+                  a.header__sub-menu-link(href="page.html") Семинары и презентации
+                li.header__sub-menu-item
+                  a.header__sub-menu-link(href="page.html") Сайт и интернет
+            li.header__menu-item
+              a.header__menu-link(href="index.html#lists") Референс-листы
+            li.header__menu-item
+              a.header__menu-link(href="index.html#study") Обучение
+            li.header__menu-item
+              a.header__menu-link(href="index.html#team") Команда
+        .header__mobile-info
+          a.header__top-contact.header__top-contact--link(href="mailto:reklama@waterman-t.com")
+            include ./img/mail.svg
+            | reklama@waterman-t.com
+          a.header__top-contact.header__top-contact--link(href="tel:+79999999999")
+            include ./img/phone.svg
+            | +7 (999) 999-99-99
+          a.header__top-contact.header__top-contact--messanger(href="#")
+            include ./img/header-wa.svg
+          a.header__top-contact.header__top-contact--messanger(href="#")
+            include ./img/header-tg.svg

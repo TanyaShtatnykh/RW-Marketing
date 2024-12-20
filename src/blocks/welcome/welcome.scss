@@ -34,4 +34,58 @@
     text-align: center;
     color: #ffffff;
   }
+  @media screen and (max-width: 1399.98px) {
+    &__area {
+      padding: 70px 80px;
+    }
+  }
+  @media screen and (max-width: 1199.98px) {
+    &__title {
+      font-size: px-to-em(46);
+      &::after {
+        width: 500px;
+      }
+    }
+    &__subtitle {
+      font-size: px-to-em(20);
+    }
+  }
+  @media screen and (max-width: 991.98px) {
+    &__area {
+      padding: 50px 30px;
+    }
+    &__title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 10px;
+      font-size: px-to-em(40);
+      &::after {
+        width: 50%;
+        height: 3px;
+        margin: 10px 0;
+      }
+    }
+    &__subtitle {
+      font-size: px-to-em(16);
+    }
+  }    
+  @media screen and (max-width: 575.98px) {
+    &__area {
+      padding: 40px 12px;
+    }
+    &__title {
+      margin-bottom: 8px;
+      font-size: px-to-em(32);
+      &::after {
+        width: 80%;
+        height: 3px;
+        margin: 8px 0;
+      }
+    }
+    &__subtitle {
+      font-size: px-to-em(14);
+    }
+  }
 }

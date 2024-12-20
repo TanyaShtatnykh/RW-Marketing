@@ -1,7 +1,7 @@
 .contact {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
+  align-items: flex-start;
   column-gap: 50px;
   width: 100%;
   max-width: 1440px;
@@ -97,6 +97,84 @@
     cursor: pointer;
     &:hover {
       transform: translateY(-6px);
+    }
+  }
+  @media screen and (max-width: 1399.98px) {
+    padding: 0px 80px 100px;
+  }
+  @media screen and (max-width: 1199.98px) {
+    &__title {
+      margin-bottom: 20px;
+      font-size: px-to-em(36);
+    }
+    
+  }
+  @media screen and (max-width: 991.98px) {
+    column-gap: 20px;
+    padding: 0 30px 80px;
+
+    &__title {
+      margin-bottom: 10px;
+      font-size: px-to-em(28);
+    }
+    &__subtitle {
+      font-size: px-to-em(16);
+    }
+    &__form {
+      row-gap: 10px;
+    }
+    &__field {
+      font-size: px-to-em(14);
+    }
+    &__check {
+      margin-top: 6px;
+      font-size: px-to-em(14);
+    }
+    &__checkbox {
+      height: 24px;
+      width: 24px;
+      border: 4px solid #fff;
+      &:checked{
+        &::after {
+          width: 12px;
+          height: 12px;
+        }
+      }
+    }
+    &__btn {
+      font-size: px-to-em(16);
+    }
+  }
+  @media screen and (max-width: 768.98px) {
+    &__subtitle {
+      font-size: px-to-em(14);
+    }
+  }
+  @media screen and (max-width: 575.98px) {
+    grid-template-columns: 1fr;
+    gap: 20px 0;
+    padding: 0 12px 80px;
+    &__title {
+      font-size: px-to-em(24);
+    }
+    &__subtitle, &__field {
+      font-size: px-to-em(12);
+    }
+    &__check {
+      margin-top: 0;
+      font-size: px-to-em(12);
+    }
+    &__btn {
+      padding: 10px 30px;
+      font-size: px-to-em(14);
+    }
+  }
+  @media screen and (max-width: 359.98px) {
+    &__title {
+      font-size: px-to-em(20);
+    }
+    &__check {
+      font-size: px-to-em(10);
     }
   }
 }

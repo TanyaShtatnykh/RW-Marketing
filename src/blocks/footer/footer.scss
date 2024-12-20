@@ -148,4 +148,135 @@
       }
     }
   }
+  @media screen and (max-width: 1399.98px) {
+    &__area {
+      grid-template-columns: 0.8fr 1fr 1.3fr;
+      padding: 50px 80px;
+    }
+    &__logo-link {
+      margin-bottom: 24px;
+    }
+    &__logo {
+      max-width: 300px;
+    }
+  }
+  @media screen and (max-width: 1199.98px) {
+    &__area {
+      grid-template-columns: 0.8fr 1.1fr 1.3fr;
+    }
+    &__logo {
+      max-width: 280px;
+    }
+    &__title {
+      font-size: px-to-em(18);
+    }
+    &__contact {
+      column-gap: 8px;
+      font-size: px-to-em(14);
+      svg {
+        width: 14px;
+        height: 14px;
+      }
+    }
+    &__messangers {
+      column-gap: 12px;
+    }
+    &__messanger {
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+    &__menu-box {
+      column-gap: 20px;
+    }
+    &__menu-link, &__menu-item--title {
+      margin-bottom: 10px;
+      font-size: px-to-em(16);
+    }
+    &__submenu-link {
+      margin-bottom: 4px;
+      font-size: px-to-em(14);
+    }
+  }
+  @media screen and (max-width: 991.98px) {
+    &__area {
+      padding: 50px 30px;
+    }
+    &__logo {
+      max-width: 220px;
+    }
+  }
+  @media screen and (max-width: 768.98px) {
+    &__area {
+      grid-template-columns: 0.5fr 0.9fr 1.3fr;
+    }
+    &__logo {
+      max-width: 130px;
+    }
+    &__copyright {
+      font-size: px-to-em(12);
+    }
+    &__title {
+      font-size: px-to-em(14);
+    }
+    &__contact-box {
+      row-gap: 8px;
+      padding: 0 16px;
+    }
+    &__contact {
+      column-gap: 4px;
+      font-size: px-to-em(12);
+      svg {
+        width: 12px;
+        height: 12px;
+      }
+    }
+    &__messangers {
+      column-gap: 12px;
+    }
+    &__messanger {
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+    &__menu-box {
+      column-gap: 20px;
+    }
+    &__menu-link, &__menu-item--title {
+      margin-bottom: 10px;
+      font-size: px-to-em(14);
+    }
+    &__submenu-link {
+      margin-bottom: 4px;
+      font-size: px-to-em(12);
+    }
+  }
+  @media screen and (max-width: 575.98px) {
+    &__area {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      row-gap: 30px;
+    }
+    &__logo-box, &__contact-box, &__menu-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__logo {
+      max-width: 180px;
+    }
+    &__menu-list {
+      align-items: center;
+    }
+    &__menu-link, &__submenu-link, &__contact, &__title {
+      text-align: center;
+    }
+    &__submenu-link {
+      margin-bottom: 10px;
+    }
+  }
+  @media screen and (max-width: 359.98px) {}
 }

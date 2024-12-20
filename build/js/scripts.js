@@ -12,6 +12,11 @@ $(function() {
     }
   });
 });
+
+
+$(function() {
+  $("#tabs").tabs();
+});
 $(function() {
   $('.contact__field--phone').inputmask({"mask": " +7 999 9999999 "} );
 });
@@ -30,6 +35,19 @@ $(function () {
 		}
   })
 });
+$(function () {
+  $('.header__burger-btn').on('click', function() {
+    $(this).toggleClass('header__burger-btn--open');
+    $('.header__wrapper').toggleClass('header__wrapper--open');
+  });
+  $('.header__menu-link', '.header__sub-menu-link').on('click', function() {
+    if ($('.header__burger-btn').hasClass('header__burger-btn--open')) {
+      $('.header__burger-btn').removeClass('header__burger-btn--open');
+      $('.header__wrapper').removeClass('header__wrapper--open');
+    }
+  })
+});
+
 
 
 const childrenSwiper = new Swiper('.page-info__slider', {
@@ -37,21 +55,21 @@ const childrenSwiper = new Swiper('.page-info__slider', {
     nextEl: '.page-info__arrow--next',
     prevEl: '.page-info__arrow--prev'
   },
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'fraction',
-  },
   loop: true,
   preloadImages: false,
   lazy: {
     loadOnTransitionStart: false,
   },
-  slidesPerView: 2,
-  spaceBetween: 10,
-  grabCursor: true,
+  breakpoints: {
+    280: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        grabCursor: false,
+    },
+    768: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+        grabCursor: true,
+    }
+  }
 });
-
-$(function() {
-  $("#tabs").tabs();
-});
-

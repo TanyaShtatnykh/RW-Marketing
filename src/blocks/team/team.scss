@@ -20,15 +20,15 @@
   &__area {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    width: 100%;
-    padding-top: 30px;
-    background: linear-gradient(to bottom, var(--red-color) 50%, transparent 50%);
+    align-items: stretch;
+    width: 100%;    
   }
   &__box {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 6px;
+    padding: 30px 6px 0;
+    background: linear-gradient(to bottom, var(--red-color) 50%, transparent 50%);
   }
   &__name {
     margin-bottom: 14px;
@@ -36,6 +36,7 @@
     line-height: lh-to-pct(24, 20);
     font-weight: 700;
     color: #fff;
+    text-align: center;
   }
   &__post {
     margin-bottom: 14px;
@@ -43,6 +44,7 @@
     line-height: lh-to-pct(22, 18);
     font-weight: 400;
     color: #fff;
+    text-align: center;
   }
   &__mail {
     position: relative;
@@ -53,6 +55,7 @@
     font-weight: 400;
     color: #fff;
     text-decoration: none;
+    text-align: center;
     &::after {
       content: "";
       position: absolute;
@@ -74,9 +77,94 @@
     }
   }
   &__photo {
+    margin-top: auto;
     width: 250px;
     height: 290px;
     object-fit: cover;
     box-shadow: 4px 4px 14px 0px rgba(0, 0, 0, 0.25);
+  }
+  @media screen and (max-width: 1399.98px) {
+    padding: 0px 80px 100px;
+  }
+  @media screen and (max-width: 1199.98px) {
+    &__title {
+      margin-bottom: 20px;
+      font-size: px-to-em(36);
+    }
+    &__name {
+      margin-bottom: 12px;
+      font-size: px-to-em(18);
+    }
+    &__post {
+      margin-bottom: 12px;
+      font-size: px-to-em(16);
+    }
+    &__photo {
+      width: 225px;
+      height: 261px;
+      object-fit: cover;
+      box-shadow: 4px 4px 14px 0px rgba(0, 0, 0, 0.25);
+    }
+  }
+  @media screen and (max-width: 991.98px) {
+    padding: 0px 30px 80px;
+
+    &__title {
+      margin-bottom: 10px;
+      font-size: px-to-em(28);
+    }
+    &__name {
+      margin-bottom: 10px;
+      font-size: px-to-em(16);
+    }
+    &__post {
+      margin-bottom: 10px;
+      font-size: px-to-em(14);
+    }
+    &__mail {
+      font-size: px-to-em(12);
+    }
+    &__photo {
+      width: 200px;
+      height: 232px;
+      object-fit: cover;
+      box-shadow: 4px 4px 14px 0px rgba(0, 0, 0, 0.25);
+    }
+  }
+  @media screen and (max-width: 768.98px) {
+    &__area {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
+      row-gap: 10px;
+    }
+    &__box {
+      padding-top: 20px;
+    }
+    &__mail {
+      margin-bottom: 8px;
+    }
+  }
+  @media screen and (max-width: 575.98px) {
+    padding: 0px 12px 80px;
+
+    &__title {
+      font-size: px-to-em(24);
+    }
+    &__name {
+      margin-bottom: 10px;
+      font-size: px-to-em(16);
+    }
+    &__post {
+      margin-bottom: 10px;
+      font-size: px-to-em(14);
+    }
+    &__mail {
+      font-size: px-to-em(12);
+    }
+  }
+  @media screen and (max-width: 359.98px) {
+    &__title {
+      font-size: px-to-em(20);
+    }
   }
 }
