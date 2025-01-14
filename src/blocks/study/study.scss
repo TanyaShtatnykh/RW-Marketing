@@ -9,6 +9,7 @@
   padding: 0px 100px 120px;
 
   &__title {
+    max-width: 50%;
     margin-bottom: 30px;
     font-size: px-to-em(40);
     line-height: lh-to-pct(49, 40);
@@ -27,10 +28,10 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    row-gap: 30px;
+    row-gap: 10px;
     max-width: 60%;
     min-height: 370px;
-    padding: 30px 230px 50px 30px;
+    padding: 30px 230px 30px 30px;
     background-color: var(--blue-color);
     box-shadow: 4px 4px 14px 0px rgba(0, 0, 0, 0.25);
   }

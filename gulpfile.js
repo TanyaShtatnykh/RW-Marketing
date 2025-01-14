@@ -43,7 +43,7 @@ var paths = {
     src: './src/fonts/*',
     dest: './build/fonts',
     watch: './src/fonts/*'
-  }
+  },
 };
 
 gulp.task('clean', function () {
@@ -132,7 +132,7 @@ gulp.task('build', gulp.series(
       'styles',
       'scripts',
       'images',
-      'fonts'
+      'fonts',
 ));
 
 gulp.task('dev', gulp.series(

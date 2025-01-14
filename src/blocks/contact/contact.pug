@@ -7,6 +7,7 @@ mixin contact(modifier)
       input.contact__field(type="text" placeholder="Ваше имя")
       input.contact__field.contact__field--phone(type="tel" placeholder="Номер телефона")
       input.contact__field(type="email" placeholder="Контактный e-mail *" required)
+      textarea.contact__field.contact__field--area(rows="2" placeholder="Напишите ваш вопрос")
       label.contact__check
         input.contact__checkbox(type="checkbox" required)
         | Я даю согласие на обработку персональных данных

@@ -1,9 +1,20 @@
 mixin download(modifier)
   section.download&attributes(attributes)#lists
+    h2.download__title Референс-листы
     .download__area
-      .download__wrapper.download__wrapper--info
-        h2.download__title Референс-листы
-        p.download__text Вот вам яркий пример современных тенденций — убеждённость некоторых оппонентов не даёт нам иного выбора, кроме определения модели развития. 
-      .download__wrapper.download__wrapper--btns
-        a.download__link.download__link--toright(href="#" download) REON
-        a.download__link.download__link--toleft(href="#" download) Wellmix
+      .download__wrapper
+        p.download__text Насосное оборудование WELLMIX и трубопроводная арматура REON успешно эксплуатируются в сотнях объектов в России, Республики Беларусь, Казахстане.
+        p.download__text Мы бережно собираем все объекты, присланные нашими партнерами и формируем референс-листы, которые вы можете демонстрировать своим клиентам.
+        p.download__text Кроме добавления в референс-лист, все объекты публикуются на сайте, в тг-канале и группе VK.
+        h3.download__subtitle Скачать
+        .download__links
+          a.download__link.download__link--toright(href="docs/listReon.pdf" download) REON
+          a.download__link.download__link--toleft(href="docs/listWellmix.pdf" download) Wellmix
+      .download__wrapper.download__wrapper--bg
+        p.download__text.download__text--white Вы можете присылать свои объекты с использованием нашего оборудования на почту 
+          a.download__mail(href="mailto:reklama@waterman-t.com") reklama@waterman-t.com
+        p.download__text.download__text--white Принимаются объекты в следующем формате:
+        ul.download__list 
+          li.download__item Название Компании, установившей или поставляющей оборудование REON/WELLMIX
+          li.download__item Краткое описание объекта
+          li.download__item Фото установленного или поставляемого оборудования в удовлетворительном качестве.

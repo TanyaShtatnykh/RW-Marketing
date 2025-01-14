@@ -1,29 +1,14 @@
 .download {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
   padding: 0px 100px 120px;
 
-  &__area {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    column-gap: 50px;
-  }
-  &__wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    &--info {
-      width: 52%;
-    }
-    &--btns {
-      row-gap: 20px;
-      width: 48%;
-    }
-  }
   &__title {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     font-size: px-to-em(40);
     line-height: lh-to-pct(49, 40);
     font-weight: 600;
@@ -32,20 +17,74 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  &__area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 14px;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    &--bg {
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      margin-left: 30px;
+      padding: 26px;
+      background-color: var(--blue-color);
+      box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.25);
+    }
+  }
   &__text {
+    margin-bottom: 10px;
     font-size: px-to-em(16);
     line-height: lh-to-pct(20, 16);
     font-weight: 400;
     color: var(--black-color);
+    &--white {
+      font-weight: 600;
+      color: #fff;
+      text-align: center;
+      line-height: 150%;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style-type: decimal;
+    padding-left: 26px;
+  }
+  &__item {
+    font-size: px-to-em(16);
+    line-height: 150%;
+    font-weight: 600;
+    color: #fff;
+  }
+  &__subtitle {
+    margin: 20px 0 16px;
+    font-size: px-to-em(32);
+    line-height: lh-to-pct(39, 32);
+    font-weight: 600;
+    color: var(--blue-color);
+    text-transform: uppercase;
+  }
+  &__links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    column-gap: 12px;
   }
   &__link {
     display: flex;
     justify-content: center;
     width: 100%;
     padding: 12px 24px;
-    font-size: px-to-em(32);
+    font-size: px-to-em(24);
     line-height: lh-to-pct(39, 32);
-    font-weight: 600;
+    font-weight: 500;
     color: #fff;
     text-decoration: none;
     box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.25);
@@ -59,24 +98,43 @@
       transform: translateY(-6px);
     }
   }
-  @media screen and (max-width: 1399.98px) {
-    padding: 0px 80px 100px;
-    &__wrapper {
-      &--info {
-        width: 50%;
-      }
-      &--btns {
-        width: 50%;
+  &__mail {
+    position: relative;
+    padding-bottom: 4px;
+    text-decoration: none;
+    color: #fff;
+    &::after {
+      position: absolute;
+      content: "";
+      left: 50%;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background-color: #fff;
+      transition: all .2s linear;
+    }
+    &:hover {
+      &::after {
+        left: 0%;
+        width: 70%;
+        margin: 0 15%;
       }
     }
+  }
+  @media screen and (max-width: 1399.98px) {
+    padding: 0px 80px 100px;
   }
   @media screen and (max-width: 1199.98px) {
     &__title {
       margin-bottom: 20px;
       font-size: px-to-em(36);
     }
+    &__subtitle {
+      margin: 10px 0 0;
+      font-size: px-to-em(26);
+    }
     &__link {
-      font-size: px-to-em(28);
+      font-size: px-to-em(20);
     }
   }
   @media screen and (max-width: 991.98px) {
@@ -87,39 +145,58 @@
     &__title {
       font-size: px-to-em(28);
     }
-    &__text {
+    &__text, &__item {
       font-size: px-to-em(14);
     }
     &__link {
-      padding: 12px 24px;
+      font-size: px-to-em(18);
+    }
+    &__subtitle {
+      margin: 10px 0 0;
       font-size: px-to-em(20);
+    }
+    &__wrapper--bg {
+      margin-left: 20px;
+    }
+  }
+  @media screen and (max-width: 767.98px) {
+    &__area {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+    }
+    &__wrapper--bg {
+      margin-left: 0;
+    }
+    &__subtitle {
+      margin: 10px 0;
+      font-size: px-to-em(20);
+    }
+    &__links {
+      column-gap: 6px;
     }
   }
   @media screen and (max-width: 575.98px) {
     padding: 0 12px 80px;
-    &__area {
-      flex-direction: column;
-      gap: 20px 0;
-    }
-    &__wrapper {
-      &--info {
-        width: 100%;
-      }
-      &--btns {
-        row-gap: 10px;
-        width: 100%;
-      }
-    }
     &__title {
-      margin-bottom: 10px;
+      margin-bottom: 20px;
       font-size: px-to-em(24);
     }
     &__text {
+      margin-bottom: 6px;
+    }
+    &__text, &__item {
       font-size: px-to-em(12);
+    }
+    &__subtitle {
+      font-size: px-to-em(18);
     }
     &__link {
       padding: 10px 24px;
-      font-size: px-to-em(16);
+      font-size: px-to-em(14);
+    }
+    &__wrapper--bg {
+      padding: 20px 10px;
     }
   }
   @media screen and (max-width: 359.98px) {

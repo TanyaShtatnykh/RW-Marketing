@@ -14,6 +14,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body, ul, ol, button, input, a {
@@ -45,6 +46,8 @@ ul, ol {
 
 * {
   box-sizing: border-box;
+}
+*:not([class *= "fancybox"]) {
   transition: 0.3s;
 }
 
@@ -61,6 +64,9 @@ h1, h2, h3, h4, h5, h6, p {
   background: #c4213c94;
   color: #fff;
 }
+.compensate-for-scrollbar {
+  margin-right: 0 !important;
+}
 
 @import './src/blocks/header/header';
 @import './src/blocks/footer/footer';
@@ -73,3 +79,4 @@ h1, h2, h3, h4, h5, h6, p {
 @import './src/blocks/contact/contact';
 @import './src/blocks/page-welcome/page-welcome';
 @import './src/blocks/page-info/page-info';
+@import './src/blocks/reviews/reviews';

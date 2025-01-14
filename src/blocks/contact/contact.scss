@@ -48,6 +48,10 @@
     &::placeholder {
       color: var(--black-color);
     }
+    &--area {
+      font-family: "Montserrat", sans-serif;
+      resize: none;
+    }
   }
   &__check {
     display: flex;

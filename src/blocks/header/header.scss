@@ -68,7 +68,7 @@
     align-items: center;
   }
   &__logo {
-    height: 66px;
+    height: 60px;
     object-fit: cover;
   }
   &__burger-btn {
@@ -184,7 +184,7 @@
   }
   @media screen and (max-width: 1199.98px) {
     &__menu-link {
-      font-size: px-to-em(16);
+      font-size: px-to-em(14);
       text-decoration: none;
       svg {
         width: 18px;
@@ -192,7 +192,7 @@
       }
     }
     &__wrapper {
-      max-width: 520px;
+      max-width: 600px;
     }
   }
   @media screen and (max-width: 991.98px) {
@@ -322,6 +322,9 @@
     }
     &__menu-link--drop {
       display: none;
+    }
+    &__menu-link {
+      font-size: px-to-em(16);
     }
     &__sub-menu {
       display: flex;
